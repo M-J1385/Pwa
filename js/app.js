@@ -1,3 +1,19 @@
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "vertical",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 const container = document.querySelector(".container");
 const coffees = [
   { name: "Perspiciatis", image: "images/coffee1.jpg" },
@@ -13,6 +29,7 @@ const coffees = [
 
 const showCoffees = () => {
   let output = "";
+  let slider = "";
   coffees.forEach(
     ({ name, image }) =>
       (output += `
@@ -23,6 +40,11 @@ const showCoffees = () => {
                 </div>
                 `)
   );
+  coffees.forEach(({ name, image }) => {
+    document.querySelector(
+      ".swiper-wrapper"
+    ).innerHTML += `<div class="swiper-slide">${name}</div>`;
+  });
   container.innerHTML = output;
 };
 
