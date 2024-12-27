@@ -3,7 +3,7 @@
     "short_name": "MJApp",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#fdfdfd",
+    "background_color": "#ff6666",
     "theme_color": "#db4938",
     "orientation": "portrait-primary",
     "icons": [
